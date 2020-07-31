@@ -3,6 +3,10 @@ const cors = require('cors')
 const socketio = require('socket.io');
 const http = require('http');
 const ikea = require('ikea-name-generator');
+const dbParams = require('./lib/db');
+const { Pool } = require('pg');
+const db = new Pool(dbParams);
+const router = express.Router();
 
 
 const PORT = 8080;
